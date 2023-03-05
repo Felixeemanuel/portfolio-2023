@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: rgb(243, 243, 243);
+}
+
+.hero_navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+}
+.hero_navigation h4 {
+  margin-left: 5rem;
+}
+.hero_navigation h4 span {
+  margin-left: 0.1rem;
+  font-weight: 100;
+}
+.hero_navigation ul {
+  display: flex;
+  list-style: none;
+  margin-right: 5rem;
+}
+.hero_navigation ul a {
+  padding-inline: 1rem;
+  text-decoration: none;
+  font-weight: 200;
+  color: #fff;
+  font-size: smaller;
+}
+.hero_navigation ul a i {
+  font-size: 2rem;
+}
+
+.hero_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 92vh;
+  position: relative;
+}
+.hero_section .progressbar {
+  justify-self: flex-start;
+  position: absolute;
+  left: 10%;
+}
+.hero_section .progressbar .rectangle {
+  width: 0.7rem;
+  height: 0.7rem;
+  transform: rotate(45deg);
+  border: 1px solid rgb(32, 131, 32);
+  margin-block: 0.7rem;
+}
+.hero_section .progressbar .rectangle:first-of-type {
+  background-color: rgb(32, 131, 32);
+}
+.hero_section .hero_image {
+  background-image: url("./images/my-image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid white;
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  margin-left: 2rem;
+}
+.hero_section .hero_text {
+  margin-right: 2rem;
+}
+.hero_section .hero_text h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+.hero_section .hero_text p:first-of-type {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  font-weight: 300;
+  text-align: center;
+  opacity: 0.7;
+}
+.hero_section .hero_text p:first-of-type span {
+  font-weight: bold;
+  opacity: 1;
+}
+.hero_section .hero_text p:last-of-type {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  font-weight: 200;
+  text-align: center;
+  opacity: 0.5;
+}
+
+.about_section {
+  display: flex;
+  align-items: center;
+  border-block: 0.1px solid rgba(255, 255, 255, 0.129);
+}
+.about_section img {
+  height: 100vh;
+}
+.about_section .about_me_text {
+  width: 40rem;
+  margin-left: 5rem;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.about_section .about_me_text h2 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.344);
+  font-size: 5rem;
+}
+.about_section .about_me_text p {
+  line-height: 2rem;
+  font-weight: 300;
+}
+
+.knowledge_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 0.1px solid rgba(255, 255, 255, 0.129);
+}
+.knowledge_section h2 {
+  margin-block: 4rem;
+  font-size: 4rem;
+}
+.knowledge_section .knowledge_wrapper {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.knowledge_section .knowledge_wrapper .rectangle {
+  width: 30%;
+  border: 1px solid white;
+  height: 25rem;
+  -webkit-margin-after: 2rem;
+          margin-block-end: 2rem;
+  border-radius: 1rem;
+  background-color: rgba(243, 243, 243, 0.783);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.knowledge_section .knowledge_wrapper .rectangle img {
+  width: 8rem;
+}
+.knowledge_section .knowledge_wrapper .rectangle p {
+  color: rgba(0, 0, 0, 0.738);
+  font-size: larger;
+  font-weight: 600;
+}
+.knowledge_section .knowledge_wrapper .rectangle:nth-of-type(2) img {
+  width: 10rem;
+}
+.knowledge_section .knowledge_wrapper .rectangle:nth-of-type(4) i {
+  color: #cf649a;
+  font-size: 8rem;
+}
+.knowledge_section .knowledge_wrapper .rectangle:nth-of-type(5) i {
+  color: #539e43;
+  font-size: 8rem;
+}
+
+.works_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.works_section h2 {
+  margin-block: 4rem;
+  font-size: 3rem;
+}
+.works_section .works_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.works_section .works_wrapper img {
+  height: 75vh;
+}/*# sourceMappingURL=styles.css.map */
