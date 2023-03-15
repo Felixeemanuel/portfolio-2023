@@ -57,7 +57,7 @@ body {
     .progressbar {
         justify-self: flex-start;
         position: absolute;
-        left: 10%;
+        right: 5%;
 
         .rectangle {
             width: .7rem;
@@ -119,9 +119,29 @@ body {
 .about_section {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     border-block: .1px solid rgba(255, 255, 255, 0.129);
     img {
         height: 100vh;
+    }
+
+    .progressbar {
+        justify-self: flex-start;
+        // position: absolute;
+        margin-inline: 5rem;
+
+        .rectangle {
+            width: .7rem;
+            height: .7rem;
+            transform: rotate(45deg);
+            border: 1px solid rgb(32, 131, 32);
+            margin-block: .7rem;
+        }
+
+        .rectangle:nth-of-type(2) {
+            background-color: rgb(32, 131, 32);
+        }
+    
     }
 
     .about_me_text {
@@ -131,6 +151,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        // padding-right: 5rem;
 
         h2 {
             border-bottom: 1px solid rgba(255, 255, 255, 0.344);
@@ -150,6 +171,27 @@ body {
     flex-direction: column;
     align-items: center;
     border-bottom: .1px solid rgba(255, 255, 255, 0.129);
+    position: relative;
+
+    .progressbar {
+        justify-self: flex-start;
+        position: absolute;
+        right: 5%;
+        top: 30%;
+
+        .rectangle {
+            width: .7rem;
+            height: .7rem;
+            transform: rotate(45deg);
+            border: 1px solid rgb(32, 131, 32);
+            margin-block: .7rem;
+        }
+
+        .rectangle:nth-of-type(3) {
+            background-color: rgb(32, 131, 32);
+        }
+    
+    }
 
     h2 {
         margin-block: 4rem;
@@ -159,13 +201,15 @@ body {
         width: 80%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
 
         .rectangle {
             width: 30%;
+            min-width: 20rem;
             border: 1px solid white;
             height: 25rem;
             margin-block-end: 2rem;
+            margin-inline: .5rem;
             border-radius: 1rem;
             background-color: rgba(243, 243, 243, 0.783);
             display: flex;
@@ -207,6 +251,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-bottom: .1px solid rgba(255, 255, 255, 0.129);
+    padding-bottom: 4rem;
 
     h2 {
         margin-block: 4rem;
@@ -221,5 +267,52 @@ body {
         img {
             height: 75vh;
         }
+    }
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block-end: 1rem;
+
+    .logo {
+        margin-block: 4rem;
+        font-size: 1.7rem;
+        border-bottom: .1px solid rgba(255, 255, 255, 0.172);
+        padding-inline: 5rem;
+        padding-block-end: .3rem;
+
+        span {
+            margin-left: .1rem;
+            font-weight: 100;
+        }
+    }
+
+    .nav_footer {
+        margin-block-end: 4rem;
+        ul {
+            list-style: none;
+            display: flex;
+
+            a {
+                text-decoration: none;
+                color: #fff;
+                font-weight: lighter;
+                margin-inline: 4rem;
+                font-size: 1rem;
+
+            }
+        }
+    }
+
+    .copyrights {
+        font-weight: 100;
+        font-size: .8rem;
+        opacity: .6;
+        padding-block-start: .5rem;
+        padding-inline: 5rem;
+        border-top: .1px solid rgba(255, 255, 255, 0.377);
     }
 }

@@ -52,7 +52,7 @@ body {
 .hero_section .progressbar {
   justify-self: flex-start;
   position: absolute;
-  left: 10%;
+  right: 5%;
 }
 .hero_section .progressbar .rectangle {
   width: 0.7rem;
@@ -104,10 +104,25 @@ body {
 .about_section {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   border-block: 0.1px solid rgba(255, 255, 255, 0.129);
 }
 .about_section img {
   height: 100vh;
+}
+.about_section .progressbar {
+  justify-self: flex-start;
+  margin-inline: 5rem;
+}
+.about_section .progressbar .rectangle {
+  width: 0.7rem;
+  height: 0.7rem;
+  transform: rotate(45deg);
+  border: 1px solid rgb(32, 131, 32);
+  margin-block: 0.7rem;
+}
+.about_section .progressbar .rectangle:nth-of-type(2) {
+  background-color: rgb(32, 131, 32);
 }
 .about_section .about_me_text {
   width: 40rem;
@@ -131,6 +146,23 @@ body {
   flex-direction: column;
   align-items: center;
   border-bottom: 0.1px solid rgba(255, 255, 255, 0.129);
+  position: relative;
+}
+.knowledge_section .progressbar {
+  justify-self: flex-start;
+  position: absolute;
+  right: 5%;
+  top: 30%;
+}
+.knowledge_section .progressbar .rectangle {
+  width: 0.7rem;
+  height: 0.7rem;
+  transform: rotate(45deg);
+  border: 1px solid rgb(32, 131, 32);
+  margin-block: 0.7rem;
+}
+.knowledge_section .progressbar .rectangle:nth-of-type(3) {
+  background-color: rgb(32, 131, 32);
 }
 .knowledge_section h2 {
   margin-block: 4rem;
@@ -140,14 +172,16 @@ body {
   width: 80%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 .knowledge_section .knowledge_wrapper .rectangle {
   width: 30%;
+  min-width: 20rem;
   border: 1px solid white;
   height: 25rem;
   -webkit-margin-after: 2rem;
           margin-block-end: 2rem;
+  margin-inline: 0.5rem;
   border-radius: 1rem;
   background-color: rgba(243, 243, 243, 0.783);
   display: flex;
@@ -180,6 +214,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-bottom: 0.1px solid rgba(255, 255, 255, 0.129);
+  padding-bottom: 4rem;
 }
 .works_section h2 {
   margin-block: 4rem;
@@ -192,4 +228,48 @@ body {
 }
 .works_section .works_wrapper img {
   height: 75vh;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-margin-after: 1rem;
+          margin-block-end: 1rem;
+}
+footer .logo {
+  margin-block: 4rem;
+  font-size: 1.7rem;
+  border-bottom: 0.1px solid rgba(255, 255, 255, 0.172);
+  padding-inline: 5rem;
+  -webkit-padding-after: 0.3rem;
+          padding-block-end: 0.3rem;
+}
+footer .logo span {
+  margin-left: 0.1rem;
+  font-weight: 100;
+}
+footer .nav_footer {
+  -webkit-margin-after: 4rem;
+          margin-block-end: 4rem;
+}
+footer .nav_footer ul {
+  list-style: none;
+  display: flex;
+}
+footer .nav_footer ul a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: lighter;
+  margin-inline: 4rem;
+  font-size: 1rem;
+}
+footer .copyrights {
+  font-weight: 100;
+  font-size: 0.8rem;
+  opacity: 0.6;
+  -webkit-padding-before: 0.5rem;
+          padding-block-start: 0.5rem;
+  padding-inline: 5rem;
+  border-top: 0.1px solid rgba(255, 255, 255, 0.377);
 }/*# sourceMappingURL=styles.css.map */
