@@ -105,7 +105,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-block: 0.1px solid rgba(255, 255, 255, 0.129);
+  border-top: 0.1px solid rgba(255, 255, 255, 0.129);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 .about_section img {
   height: 100vh;
@@ -145,8 +147,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-bottom: 0.1px solid rgba(255, 255, 255, 0.129);
+  border-top: 0.1px solid rgba(255, 255, 255, 0.129);
   position: relative;
+  background-color: #131212;
 }
 .knowledge_section .progressbar {
   justify-self: flex-start;
@@ -214,8 +217,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-bottom: 0.1px solid rgba(255, 255, 255, 0.129);
+  border-top: 0.1px solid rgba(255, 255, 255, 0.129);
   padding-bottom: 4rem;
+  background-color: #131212;
 }
 .works_section h2 {
   margin-block: 4rem;
@@ -236,6 +240,7 @@ footer {
   align-items: center;
   -webkit-margin-after: 1rem;
           margin-block-end: 1rem;
+  background-color: #131212;
 }
 footer .logo {
   margin-block: 4rem;

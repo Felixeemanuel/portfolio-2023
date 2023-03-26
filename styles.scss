@@ -120,7 +120,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-block: .1px solid rgba(255, 255, 255, 0.129);
+    border-top: .1px solid rgba(255, 255, 255, 0.129);
+    // background-color: #131212;
+    backdrop-filter: blur(10px);
     img {
         height: 100vh;
     }
@@ -170,8 +172,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: .1px solid rgba(255, 255, 255, 0.129);
+    border-top: .1px solid rgba(255, 255, 255, 0.129);
     position: relative;
+    background-color: #131212;
+
 
     .progressbar {
         justify-self: flex-start;
@@ -251,8 +255,10 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-bottom: .1px solid rgba(255, 255, 255, 0.129);
+    border-top: .1px solid rgba(255, 255, 255, 0.129);
     padding-bottom: 4rem;
+    background-color: #131212;
+
 
     h2 {
         margin-block: 4rem;
@@ -276,6 +282,7 @@ footer {
     flex-direction: column;
     align-items: center;
     margin-block-end: 1rem;
+    background-color: #131212;
 
     .logo {
         margin-block: 4rem;
