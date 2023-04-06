@@ -4,13 +4,30 @@
     box-sizing: border-box;
 }
 
-html {
+$small: 600px;
+$medium: 768px;
+$medium-large: 1024px;
+
+html, body {
     color-scheme: dark;
+
+    @media screen and (max-width: $small) {
+        overflow-x: hidden;
+    }
+
+    @media screen and (max-width: $medium) {
+        overflow-x: hidden;
+    }
+    @media screen and (max-width: $medium-large) {
+        overflow-x: hidden;
+    }
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
     color: rgb(243, 243, 243);
+
+
 }
 
 .hero_navigation {
@@ -18,6 +35,18 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 8vh;
+    width: 100%;
+
+    @media screen and (max-width: $small) {
+        // position: absolute;
+        overflow: hidden;
+    }
+    @media screen and (max-width: $medium) {
+        overflow-x: hidden;
+    }
+    @media screen and (max-width: $medium-large) {
+        overflow-x: hidden;
+    }
 
     h4 {
         margin-left: 5rem;
@@ -26,6 +55,13 @@ body {
             margin-left: .1rem;
             font-weight: 100;
         }
+        @media screen and (max-width: $small) {
+            margin-left: 1.3rem;   
+        }
+        @media screen and (max-width: $medium) {
+            margin-left: 1.3rem;
+        }
+
     }
 
     ul {
@@ -33,17 +69,111 @@ body {
         list-style: none;
         margin-right: 5rem;
 
+        @media screen and (max-width: $small) {
+            flex-direction: column;
+            position: absolute;
+            right: 0;
+            top: 10%;
+            height: 80vh;
+            margin-right: 0;
+            justify-content: space-around;
+            align-items: center;
+            width: 50%;
+            z-index: 5;
+            background-color: #131212;
+            transform: translateX(100%);
+            transition: .5s cubic-bezier(0.47, 0, 0.745, 0.715);
+            opacity: .95;
+        }
+
+        @media screen and (max-width: $medium) {
+            flex-direction: column;
+            position: absolute;
+            right: 0;
+            top: 10%;
+            height: 80vh;
+            margin-right: 0;
+            justify-content: space-around;
+            align-items: center;
+            width: 50%;
+            z-index: 5;
+            background-color: #131212;
+            transform: translateX(100%);
+            transition: .5s cubic-bezier(0.47, 0, 0.745, 0.715);
+            opacity: .95;
+        }
+
+        li {
+            @media screen and (max-width: $small) {
+                opacity: 0;
+            }
+            @media screen and (max-width: $medium) {
+                opacity: 0;
+            }
+        }
+
+
         a{
             padding-inline: 1rem ;
             text-decoration: none;
             font-weight: 200;
             color: #fff;
             font-size: smaller;
+
+
         }
 
         a i {
             font-size: 2rem;
+
         }
+    }
+
+    .nav-active {
+        transform: translateX(0%);
+    }
+
+    .burger {
+        z-index: 10;
+        cursor: pointer;
+        display: none;
+
+        @media screen and (max-width: $medium) {
+            display: block;
+
+        }
+
+        @media screen and (max-width: $medium-large) {
+            display: none;
+        }
+        
+    }
+
+    .line {
+        background-color: white;
+        width: 25px;
+        height: 3px;
+        margin-right: 1.7rem;
+        border-radius: 10px;
+    }
+
+    .line:nth-of-type(3) {
+        margin-top: .2rem;
+    }
+    .line:nth-of-type(2){
+        margin-top: .2rem;
+    }
+
+}
+
+@keyframes navLinkFade {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
     }
 }
 
@@ -53,11 +183,40 @@ body {
     justify-content: center;
     height: 92vh;
     position: relative;
+    width: 100%;
+
+    @media screen and (max-width: $small) {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    @media screen and (max-width: $medium) {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    @media screen and (max-width: $medium-large) {
+        
+    }
+
 
     .progressbar {
         justify-self: flex-start;
         position: absolute;
         right: 5%;
+
+        @media screen and (max-width: $small) {
+            display: none;
+        }
+        @media screen and (max-width: $medium) {
+            display: none;
+        }
+        @media screen and (max-width: $medium-large) {
+            display: none;
+        }
+        
 
         .rectangle {
             width: .7rem;
@@ -76,19 +235,60 @@ body {
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        border: 1px solid white;
+        border: .5px solid rgba(255, 255, 255, 0.246);
         height: 20rem;
         width: 20rem;
         border-radius: 50%;
         margin-left: 2rem;
+
+        @media screen and (max-width: $small) {
+            width: 12rem;
+            height: 12rem;
+            margin-left: 0rem;
+        }
+        @media screen and (max-width: $medium) {
+            width: 15rem;
+            height: 15rem;
+            margin-left: 0rem;
+        }
+        @media screen and (max-width: $medium-large) {
+        width: 18rem;
+        height: 18rem;
+        }
     }
 
     .hero_text {
         margin-right: 2rem;
 
+        @media screen and (max-width: $small) {
+            margin-right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;   
+        }
+        @media screen and (max-width: $medium) {
+            margin-right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;   
+        }
+
+
         h1 {
             font-size: 4rem;
             text-transform: uppercase;
+            @media screen and (max-width: $small) {
+                font-size: 2rem;
+                margin-top: 3rem;
+            }
+            @media screen and (max-width: $medium) {
+                margin-top: 3rem;
+            }
+            @media screen and (max-width: $medium-large) {
+                font-size: 3.5rem;
+            }
         }
 
         p:first-of-type {
@@ -102,6 +302,14 @@ body {
                 opacity: 1;
                 
             }
+
+            @media screen and (max-width: $small) {
+                font-size: 1rem;
+                opacity: 1;
+            }
+            @media screen and (max-width: $medium-large) {
+            font-size: 1.3rem;
+            }
         }
 
         p:last-of-type {
@@ -110,6 +318,11 @@ body {
             font-weight: 200;
             text-align: center;
             opacity: .5;
+
+            @media screen and (max-width: $small) {
+                font-size: .8rem;
+                opacity: 1;
+            }
         }
     }
 
@@ -121,16 +334,34 @@ body {
     align-items: center;
     justify-content: space-between;
     border-top: .1px solid rgba(255, 255, 255, 0.129);
-    // background-color: #131212;
-    backdrop-filter: blur(10px);
+    background-color: #131212;
     img {
         height: 100vh;
+
+        @media screen and (max-width: $small) {
+            display: none;
+        }
+        @media screen and (max-width: $medium) {
+            display: none;
+        }
+        @media screen and (max-width: $medium-large) {
+            height: 100vh;
+        }
     }
 
     .progressbar {
         justify-self: flex-start;
         // position: absolute;
         margin-inline: 5rem;
+        @media screen and (max-width: $small) {
+            display: none;
+        }
+        @media screen and (max-width: $medium) {
+            display: none;
+        }
+        @media screen and (max-width: $medium-large) {
+            display: none;
+        }
 
         .rectangle {
             width: .7rem;
@@ -155,14 +386,63 @@ body {
         justify-content: space-evenly;
         // padding-right: 5rem;
 
+        @media screen and (max-width: $small) {
+            max-width: $small;
+            margin: auto;
+            justify-content: space-evenly;
+            align-items: center;
+            
+        }
+        @media screen and (max-width: $medium) {
+            max-width: 100%;
+            margin: auto;
+            // justify-content: space-evenly;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        @media screen and (max-width: $medium-large) {
+            margin-left: 0rem;
+            flex: 1;
+        }
+
         h2 {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.344);
+            // border-bottom: 1px solid rgba(255, 255, 255, 0.344);
             font-size: 5rem;
+
+            @media screen and (max-width: $small) {
+                font-size: 2rem;
+                border-bottom: 0;
+            }
+            @media screen and (max-width: $medium) {
+                font-size: 3rem;
+                border-bottom: 0;
+                margin-bottom: 3rem;
+            }
+            @media screen and (max-width: $medium-large) {
+                font-size: 3rem;
+                align-self: center;  
+            }
         }
 
         p {
             line-height: 2rem;
             font-weight: 300;
+
+            @media screen and (max-width: $small) {
+                max-width: 85%;
+                font-size: 1rem;
+            }
+            @media screen and (max-width: $medium) {
+                width: 100%;
+                font-size: 1.2rem;
+                
+            }
+            @media screen and (max-width: $medium-large) {
+                font-size: 1rem;
+                width: 85%;
+                align-self: center;
+            }
         }
     }
 }
@@ -175,6 +455,7 @@ body {
     border-top: .1px solid rgba(255, 255, 255, 0.129);
     position: relative;
     background-color: #131212;
+    margin-bottom: 3rem;
 
 
     .progressbar {
@@ -182,6 +463,16 @@ body {
         position: absolute;
         right: 5%;
         top: 30%;
+
+        @media screen and (max-width: $small) {
+            display: none;
+        }
+        @media screen and (max-width: $medium) {
+            display: none;
+        }
+        @media screen and (max-width: $medium-large) {
+            display: none;
+        }
 
         .rectangle {
             width: .7rem;
@@ -200,16 +491,26 @@ body {
     h2 {
         margin-block: 4rem;
         font-size: 4rem;
+
+        @media screen and (max-width: $small) {
+            font-size: 2rem;
+        }
+        @media screen and (max-width: $medium) {
+            font-size: 3rem;
+        }
+        @media screen and (max-width: $medium-large) {
+            font-size: 3rem;   
+        }
     }
     .knowledge_wrapper {
-        width: 80%;
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
 
         .rectangle {
             width: 30%;
-            min-width: 20rem;
+            width: 20rem;
             border: 1px solid white;
             height: 25rem;
             margin-block-end: 2rem;
@@ -220,30 +521,105 @@ body {
             flex-direction: column;
             align-items: center;
             justify-content: space-evenly;
+
+            @media screen and (max-width: $small) {
+                width: 10rem;
+                height: 10rem;
+            }
+            @media screen and (max-width: $medium) {
+                width: 13rem;
+                height: 13rem;
+            }
+            @media screen and (max-width: $medium-large) {
+                width: 15rem;
+                height: 15rem;
+            }
         }
 
         .rectangle img {
             width: 8rem;
+
+            @media screen and (max-width: $small) {
+                width: 4rem;
+            }
+            @media screen and (max-width: $medium) {
+                width: 6rem;
+            }
         }
 
         .rectangle p {
             color: rgba(0, 0, 0, 0.738);
             font-size: larger;
             font-weight: 600;
+
+            @media screen and (max-width: $small) {
+                font-size: 1rem;
+            }
+            @media screen and (max-width: $small) {
+                font-size: 1rem;
+            }
         }
 
         .rectangle:nth-of-type(2) img {
             width: 10rem;
+
+            @media screen and (max-width: $small) {
+                width: 5rem;
+            }
+            @media screen and (max-width: $medium) {
+                width: 8rem;
+            }
         }
 
         .rectangle:nth-of-type(4) i {
             color: #cf649a;
             font-size: 8rem;
+
+            @media screen and (max-width: $small) {
+                font-size: 4rem;
+            }
+            @media screen and (max-width: $medium) {
+                font-size: 5rem;
+            }
+        }
+
+        .rectangle:nth-of-type(5) p {
+
+            span {
+                @media screen and (max-width: $small) {
+                    font-size: .8rem;
+                    opacity: .8;
+                }
+                @media screen and (max-width: $medium) {
+                    font-size: 1rem;
+                    opacity: .8;
+                }
+            }
+
+            @media screen and (max-width: $small) {
+                text-align: center;
+
+            }
+            @media screen and (max-width: $medium) {
+                text-align: center;
+
+            }
         }
 
         .rectangle:nth-of-type(5) i {
             color: #539e43;
             font-size: 8rem;
+
+            @media screen and (max-width: $small) {
+                font-size: 4rem;
+                display: flex;
+                
+            }
+            @media screen and (max-width: $medium) {
+                font-size: 6rem;
+                display: flex;
+                
+            }
         }
 
     }
@@ -256,22 +632,245 @@ body {
     align-items: center;
     justify-content: center;
     border-top: .1px solid rgba(255, 255, 255, 0.129);
-    padding-bottom: 4rem;
     background-color: #131212;
 
 
     h2 {
         margin-block: 4rem;
         font-size: 3rem;
+
+        @media screen and (max-width: $small) {
+            font-size: 2rem;
+            margin: 1rem 0 0 0 ;
+        }
+        @media screen and (max-width: $medium) {
+            font-size: 3rem;
+            margin: 1rem 0 0 0 ;
+        }
     }
 
     .works_wrapper {
         display: flex;
         align-items: center;
         justify-content: center;
+        @media screen and (max-width: $small) {
+            margin-top: 2rem;
+        }
+        @media screen and (max-width: $medium) {
+            margin-top: 2rem;
+        }
 
         img {
             height: 75vh;
+
+            @media screen and (max-width: $small) {
+                width: 90%;
+                height: fit-content;
+            }
+            @media screen and (max-width: $medium) {
+                width: 90%;
+                height: fit-content;
+            }
+        }
+    }
+}
+
+.form-section {
+    display: flex;
+    height: auto;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    
+
+    @media screen and (max-width: $small) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+
+    }
+    @media screen and (max-width: $medium) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+
+    }
+    @media screen and (max-width: $medium-large) {
+        margin-top: 5rem;
+
+    }
+    .form-intro {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        flex: 1;
+        margin-inline-end: 5rem;
+
+        @media screen and (max-width: $small) {
+            margin-inline-end: 0;
+            flex: 0;
+            margin-bottom: 2rem;
+        }
+        @media screen and (max-width: $medium) {
+            margin-inline-end: 0;
+            flex: 0;
+            margin-bottom: 2rem;
+        }
+        @media screen and (max-width: $medium-large) {
+            margin-inline-end: 4rem;
+            flex: 1;
+            margin-bottom: 5rem;
+            align-items: flex-start;
+        }
+
+        h3{
+            font-size: 3.5rem;
+            font-weight: 500;
+
+            @media screen and (max-width: $small) {
+                font-size: 1.5rem;
+            }
+            @media screen and (max-width: $medium) {
+                font-size: 2rem;
+                margin-top: 5rem;
+            }
+            @media screen and (max-width: $medium-large) {
+                font-size: 3rem;
+            }
+        }
+        p {
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            font-weight: 200;
+            line-height: 2.4rem;
+            span {
+                font-weight: 500;
+            }
+
+            @media screen and (max-width: $small) {
+                font-size: .8rem;
+                line-height: 1.4rem;
+            }
+            @media screen and (max-width: $medium) {
+                font-size: 1.3rem;
+                line-height: 2rem;
+            }
+            @media screen and (max-width: $medium-large) {
+                font-size: 1.3rem;
+                line-height: 2rem;
+            }
+        }
+    }
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        width: 90%;
+        margin-top: 3rem;
+
+        @media screen and (max-width: $small) {
+            flex: 0;
+        }
+        @media screen and (max-width: $medium) {
+            flex: 0;
+            margin-top: 2rem;
+        }
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+            label {
+                font-size: 1.5rem;
+                font-weight: 200;
+                margin-bottom: .3rem;
+
+                @media screen and (max-width: $small) {
+                    font-size: 1rem;
+                }
+                @media screen and (max-width: $medium) {
+                    font-size: 1.3rem;
+                }
+                @media screen and (max-width: $medium-large) {
+                    font-size: 1rem;
+                }
+            }
+            input {
+                font-size: 1.5rem;
+                // border: .5px solid firebrick;
+
+                @media screen and (max-width: $small) {
+                    font-size: .8rem;
+                    padding: .3rem .3rem;
+                }
+                @media screen and (max-width: $medium) {
+                    font-size: 1rem;
+                    padding: .3rem .3rem;
+                }
+                @media screen and (max-width: $medium-large) {
+                    font-size: .8rem;
+                    padding: .3rem .3rem;
+                }
+            }
+            textarea {
+                resize: none;
+                font-family: 'Montserrat', sans-serif;
+                padding: .5rem;
+
+                @media screen and (max-width: $small) {
+                    height: 5rem;
+                }
+                @media screen and (max-width: $medium) {
+                    height: 10rem;
+                }
+            }
+        }
+
+        .send-btn {
+            font-size: 1rem;
+            padding: .5rem 2rem;
+            display: inline-block;
+            width: fit-content;
+            background-color: rgb(32, 131, 32);
+            outline: none;
+            border: 0;
+            border-radius: .2rem;
+            cursor: pointer;
+            transition: 200ms ease;
+
+            @media screen and (max-width: $small) {
+                padding: .3rem 1.5rem;
+                width: 100%;
+            }
+            @media screen and (max-width: $medium) {
+                padding: .5rem 1.5rem;
+                width: 100%;
+                font-size: 1.3rem;
+            }
+        }
+        .send-btn:hover {
+            background-color: rgb(24, 152, 24);
+            transform: scale(1.02);
+        }
+
+        .sendErrorText {
+            visibility: hidden;
+            margin-top: .5rem;
+        }
+
+        .emailSent {
+            opacity: 0;
+            @media screen and (max-width: $small) {
+                width: 80%;
+            }
+
+            .fa-thumbs-up {
+                color: rgb(32, 131, 32);
+
+            }
         }
     }
 }
@@ -283,6 +882,7 @@ footer {
     align-items: center;
     margin-block-end: 1rem;
     background-color: #131212;
+    
 
     .logo {
         margin-block: 4rem;
@@ -291,6 +891,21 @@ footer {
         padding-inline: 5rem;
         padding-block-end: .3rem;
 
+        @media screen and (max-width: $small) {
+            margin-bottom: 2rem;
+            font-size: 1.3rem;
+            padding-block-end: .8rem;
+        }
+        @media screen and (max-width: $medium) {
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            padding-block-end: .8rem;
+        }
+        @media screen and (max-width: $medium-large) {
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            padding-block-end: .8rem;
+        }
         span {
             margin-left: .1rem;
             font-weight: 100;
@@ -298,7 +913,7 @@ footer {
     }
 
     .nav_footer {
-        margin-block-end: 4rem;
+        margin-block-end: 3rem;
         ul {
             list-style: none;
             display: flex;
@@ -310,6 +925,14 @@ footer {
                 margin-inline: 4rem;
                 font-size: 1rem;
 
+                @media screen and (max-width: $medium) {
+                    font-size: 1rem;
+                    margin-inline: 2.5rem;
+                }
+                @media screen and (max-width: $medium-large) {
+                    font-size: 1rem;
+                    margin-inline: 4.5rem;
+                }
             }
         }
     }
@@ -319,7 +942,14 @@ footer {
         font-size: .8rem;
         opacity: .6;
         padding-block-start: .5rem;
-        padding-inline: 5rem;
+        padding-inline: 3rem;
         border-top: .1px solid rgba(255, 255, 255, 0.377);
+
+        @media screen and (max-width: $medium) {
+            font-size: .9rem;
+        }
+        @media screen and (max-width: $medium-large) {
+            font-size: .8rem;
+        }
     }
 }
