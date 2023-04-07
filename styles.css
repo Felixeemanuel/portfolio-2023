@@ -738,9 +738,9 @@ body {
 @media screen and (max-width: 600px) {
   .works_section .works_wrapper img {
     width: 90%;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
   }
 }
 @media screen and (max-width: 768px) {

@@ -694,7 +694,8 @@ body {
 
             @media screen and (max-width: $small) {
                 width: 90%;
-                height: fit-content;
+                height: fit-content !important;
+                // height: auto;
             }
             @media screen and (max-width: $medium) {
                 width: 90%;
