@@ -1,16 +1,16 @@
 const sendBtn = document.querySelector('#sendBtn')
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
-gsap.utils.toArray(".panel").forEach((panel, i) => {
-    ScrollTrigger.create({
-        trigger: panel,
-        start: "top top",
-        pin: true,
-        scrub: true,
-        pinSpacing: false
-    });
-});
+// gsap.utils.toArray(".panel").forEach((panel, i) => {
+//     ScrollTrigger.create({
+//         trigger: panel,
+//         start: "top top",
+//         pin: true,
+//         scrub: true,
+//         pinSpacing: false
+//     });
+// });
 
 
 const sendMail = () => {

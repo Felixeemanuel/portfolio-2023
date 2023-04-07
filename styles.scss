@@ -28,7 +28,7 @@ html, body {
 body {
     font-family: 'Montserrat', sans-serif;
     color: rgb(243, 243, 243);
-
+    background-color: #131212;
 
 }
 
@@ -998,4 +998,8 @@ footer {
             font-size: .8rem;
         }
     }
+}
+
+.panel {
+    background-color: #131212;
 }

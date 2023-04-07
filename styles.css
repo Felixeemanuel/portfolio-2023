@@ -27,6 +27,7 @@ html, body {
 body {
   font-family: "Montserrat", sans-serif;
   color: rgb(243, 243, 243);
+  background-color: #131212;
 }
 
 .hero_navigation {
@@ -1093,4 +1094,8 @@ footer .copyrights {
   footer .copyrights {
     font-size: 0.8rem;
   }
+}
+
+.panel {
+  background-color: #131212;
 }/*# sourceMappingURL=styles.css.map */
