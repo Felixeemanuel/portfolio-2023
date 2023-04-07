@@ -69,7 +69,8 @@ const sendMail = () => {
         email_id.value = ''
         message.value = ''
 
-        gsap.fromTo("#emailSent", 1.25, { opacity: 0, x: 100 }, { opacity: 1, x: 0, ease: "elastic.out(1, 0.3)" } )
+        gsap.fromTo("#emailSent", 1.24, { opacity: 0, x: 100 }, { opacity: 1, x: 0, ease: "elastic.out(1, 0.3)" }  )
+        
     })
     .catch(err => console.log(err))
 }
@@ -101,4 +102,28 @@ const navSlide = () => {
 }
 
 navSlide()
+
+
+const scrollToAboutSection = () => {
+
+    const aboutSection = document.querySelector('.about_section')
+
+    aboutSection.scrollIntoView({behavior: 'smooth', block: 'start'})
+}
+const scrollToWorkSection = () => {
+
+    const workSection = document.querySelector('.works_section')
+
+    workSection.scrollIntoView({behavior: 'smooth', block: 'start'})
+}
+const scrollToContactSection = () => {
+
+    const contactSection = document.querySelector('.form-section')
+
+    contactSection.scrollIntoView({behavior: 'smooth', block: 'start'})
+}
+
+document.querySelector('#aboutBtn').addEventListener('click', scrollToAboutSection)
+document.querySelector('#workBtn').addEventListener('click', scrollToWorkSection)
+document.querySelector('#contactBtn').addEventListener('click', scrollToContactSection)
 

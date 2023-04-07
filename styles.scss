@@ -20,6 +20,7 @@ html, body {
     }
     @media screen and (max-width: $medium-large) {
         overflow-x: hidden;
+        
     }
 }
 
@@ -68,6 +69,7 @@ body {
         display: flex;
         list-style: none;
         margin-right: 5rem;
+        align-items: center;
 
         @media screen and (max-width: $small) {
             flex-direction: column;
@@ -83,7 +85,7 @@ body {
             background-color: #131212;
             transform: translateX(100%);
             transition: .5s cubic-bezier(0.47, 0, 0.745, 0.715);
-            opacity: .95;
+            opacity: .98;
         }
 
         @media screen and (max-width: $medium) {
@@ -100,7 +102,7 @@ body {
             background-color: #131212;
             transform: translateX(100%);
             transition: .5s cubic-bezier(0.47, 0, 0.745, 0.715);
-            opacity: .95;
+            opacity: .98;
         }
 
         li {
@@ -110,16 +112,26 @@ body {
             @media screen and (max-width: $medium) {
                 opacity: 0;
             }
+
+            a {
+                color: white;
+
+            }
+            
+        }
+        li a:nth-child(1) {
+            margin-inline-end: 1rem;
         }
 
 
-        a{
+        button{
             padding-inline: 1rem ;
             text-decoration: none;
             font-weight: 200;
             color: #fff;
             font-size: smaller;
-
+            background-color: transparent;
+            border: 0;
 
         }
 
@@ -138,8 +150,13 @@ body {
         cursor: pointer;
         display: none;
 
+        @media screen and (max-width: $small) {
+            display: block !important;
+
+        }
+
         @media screen and (max-width: $medium) {
-            display: block;
+            display: block !important;
 
         }
 
@@ -242,8 +259,8 @@ body {
         margin-left: 2rem;
 
         @media screen and (max-width: $small) {
-            width: 12rem;
-            height: 12rem;
+            width: 13rem !important;
+            height: 13rem !important;
             margin-left: 0rem;
         }
         @media screen and (max-width: $medium) {
@@ -280,8 +297,8 @@ body {
             font-size: 4rem;
             text-transform: uppercase;
             @media screen and (max-width: $small) {
-                font-size: 2rem;
-                margin-top: 3rem;
+                font-size: 3rem !important;
+                margin-top: 2rem !important;
             }
             @media screen and (max-width: $medium) {
                 margin-top: 3rem;
@@ -304,7 +321,7 @@ body {
             }
 
             @media screen and (max-width: $small) {
-                font-size: 1rem;
+                font-size: 1.3rem !important;
                 opacity: 1;
             }
             @media screen and (max-width: $medium-large) {
@@ -320,8 +337,8 @@ body {
             opacity: .5;
 
             @media screen and (max-width: $small) {
-                font-size: .8rem;
-                opacity: 1;
+                font-size: .9rem;
+                opacity: .9;
             }
         }
     }
@@ -391,6 +408,8 @@ body {
             margin: auto;
             justify-content: space-evenly;
             align-items: center;
+            padding-top: 3rem;
+            height: auto;
             
         }
         @media screen and (max-width: $medium) {
@@ -409,9 +428,10 @@ body {
         h2 {
             // border-bottom: 1px solid rgba(255, 255, 255, 0.344);
             font-size: 5rem;
+            font-weight: 500;
 
             @media screen and (max-width: $small) {
-                font-size: 2rem;
+                font-size: 2rem !important;
                 border-bottom: 0;
             }
             @media screen and (max-width: $medium) {
@@ -432,6 +452,8 @@ body {
             @media screen and (max-width: $small) {
                 max-width: 85%;
                 font-size: 1rem;
+                padding-bottom: 3rem;
+                text-align: center;
             }
             @media screen and (max-width: $medium) {
                 width: 100%;
@@ -491,9 +513,10 @@ body {
     h2 {
         margin-block: 4rem;
         font-size: 4rem;
+        font-weight: 500;
 
         @media screen and (max-width: $small) {
-            font-size: 2rem;
+            font-size: 2rem !important;
         }
         @media screen and (max-width: $medium) {
             font-size: 3rem;
@@ -522,9 +545,14 @@ body {
             align-items: center;
             justify-content: space-evenly;
 
+            @media  screen and (max-width: 415px) {
+                max-width: 10rem !important;
+                height: 4rem ;
+            }
+
             @media screen and (max-width: $small) {
-                width: 10rem;
-                height: 10rem;
+                width: 12rem !important;
+                height: 12rem !important;
             }
             @media screen and (max-width: $medium) {
                 width: 13rem;
@@ -638,9 +666,10 @@ body {
     h2 {
         margin-block: 4rem;
         font-size: 3rem;
+        font-weight: 500;
 
         @media screen and (max-width: $small) {
-            font-size: 2rem;
+            font-size: 2rem !important;
             margin: 1rem 0 0 0 ;
         }
         @media screen and (max-width: $medium) {
@@ -687,9 +716,10 @@ body {
 
     @media screen and (max-width: $small) {
         flex-direction: column;
-        align-items: center;
+        align-items: center !important;
         justify-content: center;
         width: 90%;
+        margin-top: 2rem !important;
 
     }
     @media screen and (max-width: $medium) {
@@ -711,9 +741,10 @@ body {
         margin-inline-end: 5rem;
 
         @media screen and (max-width: $small) {
-            margin-inline-end: 0;
+            margin-inline-end: 0rem !important;
             flex: 0;
             margin-bottom: 2rem;
+            align-items: center !important;
         }
         @media screen and (max-width: $medium) {
             margin-inline-end: 0;
@@ -721,10 +752,10 @@ body {
             margin-bottom: 2rem;
         }
         @media screen and (max-width: $medium-large) {
-            margin-inline-end: 4rem;
             flex: 1;
-            margin-bottom: 5rem;
-            align-items: flex-start;
+            margin-bottom: 2rem;
+            align-items: center;
+            margin-inline-end: 2rem;
         }
 
         h3{
@@ -740,6 +771,7 @@ body {
             }
             @media screen and (max-width: $medium-large) {
                 font-size: 3rem;
+
             }
         }
         p {
@@ -752,8 +784,8 @@ body {
             }
 
             @media screen and (max-width: $small) {
-                font-size: .8rem;
-                line-height: 1.4rem;
+                font-size: 1rem !important;
+                line-height: 1.5rem !important;
             }
             @media screen and (max-width: $medium) {
                 font-size: 1.3rem;
@@ -762,6 +794,7 @@ body {
             @media screen and (max-width: $medium-large) {
                 font-size: 1.3rem;
                 line-height: 2rem;
+                text-align: center;
             }
         }
     }
@@ -842,8 +875,9 @@ body {
             transition: 200ms ease;
 
             @media screen and (max-width: $small) {
-                padding: .3rem 1.5rem;
+                padding: .3rem 1.5rem !important;
                 width: 100%;
+                font-size: 1rem !important;
             }
             @media screen and (max-width: $medium) {
                 padding: .5rem 1.5rem;
@@ -893,7 +927,7 @@ footer {
 
         @media screen and (max-width: $small) {
             margin-bottom: 2rem;
-            font-size: 1.3rem;
+            font-size: 1.3rem !important;
             padding-block-end: .8rem;
         }
         @media screen and (max-width: $medium) {
@@ -925,6 +959,11 @@ footer {
                 margin-inline: 4rem;
                 font-size: 1rem;
 
+                @media screen and (max-width: $small) {
+                    font-size: .7rem !important;
+                    margin-inline: 1.5rem !important;
+                }
+
                 @media screen and (max-width: $medium) {
                     font-size: 1rem;
                     margin-inline: 2.5rem;
@@ -945,6 +984,11 @@ footer {
         padding-inline: 3rem;
         border-top: .1px solid rgba(255, 255, 255, 0.377);
 
+        @media screen and (max-width: $small) {
+            font-size: .7rem !important;
+            width: 100%;
+            padding: auto !important;
+        }
         @media screen and (max-width: $medium) {
             font-size: .9rem;
         }
