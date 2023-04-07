@@ -10,6 +10,7 @@ $medium-large: 1024px;
 
 html, body {
     color-scheme: dark;
+    overflow-x: hidden;
 
     @media screen and (max-width: $small) {
         overflow-x: hidden;
@@ -694,7 +695,7 @@ body {
 
             @media screen and (max-width: $small) {
                 width: 90%;
-                height: fit-content !important;
+                height: auto !important;
                 // height: auto;
             }
             @media screen and (max-width: $medium) {
