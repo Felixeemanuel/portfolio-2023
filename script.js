@@ -127,3 +127,23 @@ document.querySelector('#aboutBtn').addEventListener('click', scrollToAboutSecti
 document.querySelector('#workBtn').addEventListener('click', scrollToWorkSection)
 document.querySelector('#contactBtn').addEventListener('click', scrollToContactSection)
 
+
+const backToTopBtn = document.querySelector('#backToTopBtn')
+
+window.onscroll = function() { scrollToTopFunc() }
+
+const scrollToTopFunc = () => {
+    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopBtn.style.display = 'block'
+    } else {
+        backToTopBtn.style.display = 'none'
+    }
+}
+
+const toTop = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0
+}
+
+backToTopBtn.addEventListener('click', toTop)
+
