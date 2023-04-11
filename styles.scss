@@ -11,7 +11,7 @@ $medium-large: 1024px;
 html, body {
     color-scheme: dark;
     overflow-x: hidden;
-    touch-action: none;
+    // touch-action: none;
     // -ms-touch-action: none;
 
     @media screen and (max-width: $small) {
