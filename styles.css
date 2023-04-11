@@ -92,6 +92,7 @@ body {
     transition: 0.5s cubic-bezier(0.47, 0, 0.745, 0.715);
     opacity: 0.98;
     justify-content: space-around !important;
+    display: none;
   }
 }
 @media screen and (max-width: 600px) {
