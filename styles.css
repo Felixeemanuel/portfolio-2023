@@ -8,7 +8,6 @@ html, body {
   color-scheme: dark;
   overflow-x: hidden;
   touch-action: none;
-  -ms-touch-action: none;
 }
 @media screen and (max-width: 600px) {
   html, body {
@@ -720,6 +719,10 @@ body {
   .works_section .works_wrapper {
     margin-top: 2rem;
   }
+}
+.works_section .works_wrapper a {
+  display: flex;
+  justify-content: center;
 }
 .works_section .works_wrapper img {
   height: 75vh;

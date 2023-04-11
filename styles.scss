@@ -12,7 +12,7 @@ html, body {
     color-scheme: dark;
     overflow-x: hidden;
     touch-action: none;
-    -ms-touch-action: none;
+    // -ms-touch-action: none;
 
     @media screen and (max-width: $small) {
         overflow-x: hidden;
@@ -695,6 +695,12 @@ body {
         }
         @media screen and (max-width: $medium) {
             margin-top: 2rem;
+        }
+
+        a {
+
+            display: flex;
+            justify-content: center;
         }
 
         img {
