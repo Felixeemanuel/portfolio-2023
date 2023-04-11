@@ -962,57 +962,6 @@ footer {
             font-weight: 100;
         }
     }
-
-    .nav_footer {
-        margin-block-end: 3rem;
-        ul {
-            list-style: none;
-            display: flex;
-
-            a {
-                text-decoration: none;
-                color: #fff;
-                font-weight: lighter;
-                margin-inline: 4rem;
-                font-size: 1rem;
-
-                @media screen and (max-width: $small) {
-                    font-size: .7rem !important;
-                    margin-inline: 1.5rem !important;
-                }
-
-                @media screen and (max-width: $medium) {
-                    font-size: 1rem;
-                    margin-inline: 2.5rem;
-                }
-                @media screen and (max-width: $medium-large) {
-                    font-size: 1rem;
-                    margin-inline: 4.5rem;
-                }
-            }
-        }
-    }
-
-    .copyrights {
-        font-weight: 100;
-        font-size: .8rem;
-        opacity: .6;
-        padding-block-start: .5rem;
-        padding-inline: 3rem;
-        border-top: .1px solid rgba(255, 255, 255, 0.377);
-
-        @media screen and (max-width: $small) {
-            font-size: .7rem !important;
-            width: 100%;
-            padding: auto !important;
-        }
-        @media screen and (max-width: $medium) {
-            font-size: .9rem;
-        }
-        @media screen and (max-width: $medium-large) {
-            font-size: .8rem;
-        }
-    }
 }
 
 .panel {
