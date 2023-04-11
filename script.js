@@ -133,7 +133,7 @@ const backToTopBtn = document.querySelector('#backToTopBtn')
 window.onscroll = function() { scrollToTopFunc() }
 
 const scrollToTopFunc = () => {
-    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    if(document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
         backToTopBtn.style.display = 'block'
     } else {
         backToTopBtn.style.display = 'none'
@@ -141,8 +141,9 @@ const scrollToTopFunc = () => {
 }
 
 const toTop = () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0
+    // document.body.scrollTop = 0;
+    // document.documentElement.scrollTop = 0
+    window.scroll({top: 0, behavior: "smooth"})
 }
 
 backToTopBtn.addEventListener('click', toTop)
