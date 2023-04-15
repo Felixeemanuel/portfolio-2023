@@ -20,39 +20,77 @@ const sendMail = () => {
     const email = document.querySelector('#email_id')
     const message = document.querySelector('#message')
 
-    // if (fullName.value.trim() === '' || email_id.value.trim() === '' || message.value.trim() === '') {
-    //     fullName.style.border = '.5px solid firebrick'
-    //     return
-    //   }
-
-    if (fullName.value.trim() === '') {
-        fullName.style.border = '.5px solid firebrick'
-        sendErrorText.style.visibility = 'visible'
-        sendErrorText.innerText = 'Please enter a valid name'
-        return
-    }
-    if (email.value.trim() === '') {
-        email.style.border = '.5px solid firebrick'
-        sendErrorText.style.visibility = 'visible'
-        sendErrorText.innerText = 'Please enter an email'
-        return
-    }
-
+    let messages = []
     const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    if(!email.value.match(emailRegex)) {
+    if (fullName.value.trim() === '' && email.value.trim() === '' && message.value.trim() === '') {
+        fullName.style.border = '.5px solid firebrick'
         email.style.border = '.5px solid firebrick'
-        sendErrorText.style.visibility = 'visible'
-        sendErrorText.innerText = 'Please enter a valid email'
-        return
-    }
-
-    if (message.value.trim() === '') {
         message.style.border = '.5px solid firebrick'
+
         sendErrorText.style.visibility = 'visible'
-        sendErrorText.innerText = 'Please enter a message'
+        sendErrorText.innerText = 'Please enter all the fields'
         return
-    }
+      }
+
+      if(fullName.value === '' || fullName.value == null) {
+        fullName.style.border = '.5px solid firebrick'
+        messages.push('Enter your name')
+      }
+
+      if(!email.value.match(emailRegex) || email.value === '' || email.value == null) {
+        email.style.border = '.5px solid firebrick'
+        messages.push('Enter a valid email')
+      }
+
+      if(message.value === '' || message.value == null) {
+        message.style.border = '.5px solid firebrick'
+        messages.push('Enter a message')
+      } 
+
+      if(messages.length > 0) {
+        sendErrorText.innerText = messages.join(', ')
+
+        sendErrorText.style.visibility = 'visible'
+        return
+      }
+
+      if(messages.length == 0) {
+        fullName.style.border = ''
+        email.style.border = ''
+        message.style.border = ''
+
+        sendErrorText.style.visibility = 'hidden'
+      }
+
+    // if (fullName.value.trim() === '') {
+    //     fullName.style.border = '.5px solid firebrick'
+    //     sendErrorText.style.visibility = 'visible'
+    //     sendErrorText.innerText = 'Please enter a valid name'
+    //     return
+    // }
+    // if (email.value.trim() === '') {
+    //     email.style.border = '.5px solid firebrick'
+    //     sendErrorText.style.visibility = 'visible'
+    //     sendErrorText.innerText = 'Please enter an email'
+    //     return
+    // }
+
+    // const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    // if(!email.value.match(emailRegex)) {
+    //     email.style.border = '.5px solid firebrick'
+    //     sendErrorText.style.visibility = 'visible'
+    //     sendErrorText.innerText = 'Please enter a valid email'
+    //     return
+    // }
+
+    // if (message.value.trim() === '') {
+    //     message.style.border = '.5px solid firebrick'
+    //     sendErrorText.style.visibility = 'visible'
+    //     sendErrorText.innerText = 'Please enter a message'
+    //     return
+    // }
     
 
     const params = {
