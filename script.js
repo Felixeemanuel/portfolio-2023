@@ -49,7 +49,7 @@ const sendMail = () => {
       } 
 
       if(messages.length > 0) {
-        sendErrorText.innerText = messages.join(', ')
+        sendErrorText.innerText = messages.join(', \n')
 
         sendErrorText.style.visibility = 'visible'
         return
@@ -62,36 +62,6 @@ const sendMail = () => {
 
         sendErrorText.style.visibility = 'hidden'
       }
-
-    // if (fullName.value.trim() === '') {
-    //     fullName.style.border = '.5px solid firebrick'
-    //     sendErrorText.style.visibility = 'visible'
-    //     sendErrorText.innerText = 'Please enter a valid name'
-    //     return
-    // }
-    // if (email.value.trim() === '') {
-    //     email.style.border = '.5px solid firebrick'
-    //     sendErrorText.style.visibility = 'visible'
-    //     sendErrorText.innerText = 'Please enter an email'
-    //     return
-    // }
-
-    // const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-    // if(!email.value.match(emailRegex)) {
-    //     email.style.border = '.5px solid firebrick'
-    //     sendErrorText.style.visibility = 'visible'
-    //     sendErrorText.innerText = 'Please enter a valid email'
-    //     return
-    // }
-
-    // if (message.value.trim() === '') {
-    //     message.style.border = '.5px solid firebrick'
-    //     sendErrorText.style.visibility = 'visible'
-    //     sendErrorText.innerText = 'Please enter a message'
-    //     return
-    // }
-    
 
     const params = {
         name: fullName.value,

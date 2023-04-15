@@ -11,8 +11,6 @@ $medium-large: 1024px;
 html, body {
     color-scheme: dark;
     overflow-x: hidden;
-    // touch-action: none;
-    // -ms-touch-action: none;
 
     @media screen and (max-width: $small) {
         overflow-x: hidden;
@@ -42,7 +40,6 @@ body {
     width: 100%;
 
     @media screen and (max-width: $small) {
-        // position: absolute;
         overflow: hidden;
     }
     @media screen and (max-width: $medium) {
@@ -91,23 +88,6 @@ body {
             opacity: .98;
             justify-content: space-around !important;
             display: none;
-        }
-
-        @media screen and (max-width: $medium) {
-            // flex-direction: column;
-            // position: absolute;
-            // right: 0;
-            // top: 10%;
-            // height: 80vh;
-            // margin-right: 0;
-            // justify-content: space-around;
-            // align-items: center;
-            // width: 50%;
-            // z-index: 5;
-            // background-color: #131212;
-            // transform: translateX(100%);
-            // transition: .5s cubic-bezier(0.47, 0, 0.745, 0.715);
-            // opacity: .98;
         }
 
         li {
@@ -210,6 +190,7 @@ body {
     height: 92vh;
     position: relative;
     width: 100%;
+    
 
     @media screen and (max-width: $small) {
         display: flex;
@@ -436,8 +417,13 @@ body {
 
         h2 {
             // border-bottom: 1px solid rgba(255, 255, 255, 0.344);
-            font-size: 5rem;
+            font-size: 4rem;
             font-weight: 500;
+
+            i {
+                font-size: smaller;
+                margin-left: 3rem;
+            }
 
             @media screen and (max-width: $small) {
                 font-size: 2rem !important;
@@ -523,6 +509,10 @@ body {
         margin-block: 4rem;
         font-size: 4rem;
         font-weight: 500;
+
+        i {
+            margin-left: 3rem;
+        }
 
         @media screen and (max-width: $small) {
             font-size: 2rem !important;
@@ -670,12 +660,17 @@ body {
     justify-content: center;
     border-top: .1px solid rgba(255, 255, 255, 0.129);
     background-color: #131212;
+    border-bottom: .1px solid rgba(255, 255, 255, 0.129);;
 
 
     h2 {
         margin-block: 4rem;
         font-size: 3rem;
         font-weight: 500;
+
+        i {
+            margin-left: 3rem;
+        }
 
         @media screen and (max-width: $small) {
             font-size: 2rem !important;
@@ -706,6 +701,8 @@ body {
 
         img {
             height: 75vh;
+            transition: 200ms ease;
+            border-radius: 1rem;
 
             @media screen and (max-width: $small) {
                 width: 90%;
@@ -720,6 +717,20 @@ body {
                 width: 90%;
                 height: auto;
             }
+        }
+
+        img:hover {
+            transform: scale(1.01);
+            border-radius: 1rem;
+        }
+    }
+
+    .clickMeBtn {
+        
+        margin-block: 2rem;
+
+        i {
+            margin-left: 1rem;
         }
     }
 }

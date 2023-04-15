@@ -435,8 +435,12 @@ body {
   }
 }
 .about_section .about_me_text h2 {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 500;
+}
+.about_section .about_me_text h2 i {
+  font-size: smaller;
+  margin-left: 3rem;
 }
 @media screen and (max-width: 600px) {
   .about_section .about_me_text h2 {
@@ -527,6 +531,9 @@ body {
   margin-block: 4rem;
   font-size: 4rem;
   font-weight: 500;
+}
+.knowledge_section h2 i {
+  margin-left: 3rem;
 }
 @media screen and (max-width: 600px) {
   .knowledge_section h2 {
@@ -687,11 +694,15 @@ body {
   justify-content: center;
   border-top: 0.1px solid rgba(255, 255, 255, 0.129);
   background-color: #131212;
+  border-bottom: 0.1px solid rgba(255, 255, 255, 0.129);
 }
 .works_section h2 {
   margin-block: 4rem;
   font-size: 3rem;
   font-weight: 500;
+}
+.works_section h2 i {
+  margin-left: 3rem;
 }
 @media screen and (max-width: 600px) {
   .works_section h2 {
@@ -726,6 +737,8 @@ body {
 }
 .works_section .works_wrapper img {
   height: 75vh;
+  transition: 200ms ease;
+  border-radius: 1rem;
 }
 @media screen and (max-width: 600px) {
   .works_section .works_wrapper img {
@@ -746,6 +759,16 @@ body {
     width: 90%;
     height: auto;
   }
+}
+.works_section .works_wrapper img:hover {
+  transform: scale(1.01);
+  border-radius: 1rem;
+}
+.works_section .clickMeBtn {
+  margin-block: 2rem;
+}
+.works_section .clickMeBtn i {
+  margin-left: 1rem;
 }
 
 .form-section {
