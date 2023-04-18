@@ -109,6 +109,10 @@ body {
         }
         li a:nth-child(1) {
             margin-inline-end: 1rem;
+
+            @media screen and (max-width: $small) {
+                margin-inline-end: 0;
+            }
         }
 
 
@@ -155,6 +159,10 @@ body {
         
     }
 
+    .burger div {
+        transition: .2s ease;
+    }
+
     .line {
         background-color: white;
         width: 25px;
@@ -181,6 +189,16 @@ body {
         transform: translateX(0px);
         opacity: 1;
     }
+}
+
+.toggle .line:nth-of-type(1) {
+    transform: rotate(-45deg) translate(-3px, 6px);
+}
+.toggle .line:nth-of-type(2) {
+    opacity: 0;
+}
+.toggle .line:nth-of-type(3) {
+    transform: rotate(45deg) translate(-2px, -6px);
 }
 
 .hero_section {
@@ -725,12 +743,21 @@ body {
         }
     }
 
-    .clickMeBtn {
+    .work-links {
         
         margin-block: 2rem;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
 
-        i {
-            margin-left: 1rem;
+        a {
+            // color: white;
+            cursor: pointer;
+            // text-decoration: none;
+
+            i {
+                margin-left: .5rem;
+            }
         }
     }
 }
@@ -867,7 +894,7 @@ body {
                 // border: .5px solid firebrick;
 
                 @media screen and (max-width: $small) {
-                    font-size: .8rem;
+                    font-size: 1rem;
                     padding: .3rem .3rem;
                 }
                 @media screen and (max-width: $medium) {
@@ -875,7 +902,7 @@ body {
                     padding: .3rem .3rem;
                 }
                 @media screen and (max-width: $medium-large) {
-                    font-size: .8rem;
+                    font-size: 1rem;
                     padding: .3rem .3rem;
                 }
             }
@@ -886,6 +913,7 @@ body {
 
                 @media screen and (max-width: $small) {
                     height: 5rem;
+                    font-size: 1rem;
                 }
                 @media screen and (max-width: $medium) {
                     height: 10rem;

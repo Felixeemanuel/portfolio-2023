@@ -115,6 +115,12 @@ body {
   -webkit-margin-end: 1rem;
           margin-inline-end: 1rem;
 }
+@media screen and (max-width: 600px) {
+  .hero_navigation ul li a:nth-child(1) {
+    -webkit-margin-end: 0;
+            margin-inline-end: 0;
+  }
+}
 .hero_navigation ul button {
   padding-inline: 1rem;
   text-decoration: none;
@@ -151,6 +157,9 @@ body {
     display: none;
   }
 }
+.hero_navigation .burger div {
+  transition: 0.2s ease;
+}
 .hero_navigation .line {
   background-color: white;
   width: 25px;
@@ -186,6 +195,18 @@ body {
     opacity: 1;
   }
 }
+.toggle .line:nth-of-type(1) {
+  transform: rotate(-45deg) translate(-3px, 6px);
+}
+
+.toggle .line:nth-of-type(2) {
+  opacity: 0;
+}
+
+.toggle .line:nth-of-type(3) {
+  transform: rotate(45deg) translate(-2px, -6px);
+}
+
 .hero_section {
   display: flex;
   align-items: center;
@@ -764,11 +785,17 @@ body {
   transform: scale(1.01);
   border-radius: 1rem;
 }
-.works_section .clickMeBtn {
+.works_section .work-links {
   margin-block: 2rem;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
-.works_section .clickMeBtn i {
-  margin-left: 1rem;
+.works_section .work-links a {
+  cursor: pointer;
+}
+.works_section .work-links a i {
+  margin-left: 0.5rem;
 }
 
 .form-section {
@@ -932,7 +959,7 @@ body {
 }
 @media screen and (max-width: 600px) {
   .form-section .contact-form .input-group input {
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 0.3rem 0.3rem;
   }
 }
@@ -944,7 +971,7 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .form-section .contact-form .input-group input {
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 0.3rem 0.3rem;
   }
 }
@@ -956,6 +983,7 @@ body {
 @media screen and (max-width: 600px) {
   .form-section .contact-form .input-group textarea {
     height: 5rem;
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 768px) {
