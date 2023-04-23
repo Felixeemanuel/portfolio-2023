@@ -113,6 +113,29 @@ const navSlide = () => {
 
 navSlide()
 
+// function to hide nav when scrolling and show when not scrolling
+// const navigation = document.querySelector('.hero_navigation')
+
+// const showNav = () => {
+//     navigation.classList.add('show')
+// }
+
+// const hideNav = () => {
+//     navigation.classList.remove('show')
+// }
+
+// let currPos = window.scrollY;
+// console.log(currPos)
+
+// document.addEventListener('scroll', () => {
+//     if(window.scrollY < currPos) {
+//         hideNav()
+//     } else {
+//         showNav()
+//     }
+//     currPos = window.scrollY
+// })
+
 
 const scrollToAboutSection = () => {
 

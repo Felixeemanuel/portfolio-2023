@@ -32,6 +32,10 @@ body {
 
 }
 
+// .show {
+//     transform: translateY(0px);
+// }
+
 .hero_navigation {
     display: flex;
     justify-content: space-between;
@@ -41,9 +45,13 @@ body {
 
     @media screen and (max-width: $small) {
         overflow: hidden;
+        // position: fixed;
+        z-index: 99;
+        // transform: translateY(-20px);
     }
     @media screen and (max-width: $medium) {
         overflow-x: hidden;
+        position: fixed;
     }
     @media screen and (max-width: $medium-large) {
         overflow-x: hidden;
@@ -73,7 +81,7 @@ body {
 
         @media screen and (max-width: $small) {
             display: flex;
-            position: absolute;
+            position:fixed;
             right: 0;
             top: 8%;
             flex-direction: column;

@@ -40,11 +40,13 @@ body {
 @media screen and (max-width: 600px) {
   .hero_navigation {
     overflow: hidden;
+    z-index: 99;
   }
 }
 @media screen and (max-width: 768px) {
   .hero_navigation {
     overflow-x: hidden;
+    position: fixed;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -78,7 +80,7 @@ body {
 @media screen and (max-width: 600px) {
   .hero_navigation ul {
     display: flex;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 8%;
     flex-direction: column;
