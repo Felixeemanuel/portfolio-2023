@@ -89,21 +89,17 @@ sendBtn.addEventListener('click', e => {
     sendMail()
 })
 
+const burger = document.querySelector('.burger')
+const slider = document.querySelector('#slider')
+const navLinks = document.querySelectorAll('#slider li')
 
 const navSlide = () => {
-    const burger = document.querySelector('.burger')
-    const slider = document.querySelector('#slider')
-    const navLinks = document.querySelectorAll('#slider li')
     
     burger.addEventListener('click', () => {
         slider.classList.toggle('nav-active')
 
         navLinks.forEach((link, index) => {
-            if(link.style.animation) {
-                link.style.animation = ''
-            } else {
-                link.style.animation = `navLinkFade 0.2s ease forwards ${index / 7}s`
-            }
+            link.style.animation = `navLinkFade 0.2s ease forwards ${index / 7}s`
         })
 
         burger.classList.toggle('toggle')
@@ -112,29 +108,6 @@ const navSlide = () => {
 }
 
 navSlide()
-
-// function to hide nav when scrolling and show when not scrolling
-// const navigation = document.querySelector('.hero_navigation')
-
-// const showNav = () => {
-//     navigation.classList.add('show')
-// }
-
-// const hideNav = () => {
-//     navigation.classList.remove('show')
-// }
-
-// let currPos = window.scrollY;
-// console.log(currPos)
-
-// document.addEventListener('scroll', () => {
-//     if(window.scrollY < currPos) {
-//         hideNav()
-//     } else {
-//         showNav()
-//     }
-//     currPos = window.scrollY
-// })
 
 
 const scrollToAboutSection = () => {
@@ -156,9 +129,21 @@ const scrollToContactSection = () => {
     contactSection.scrollIntoView({behavior: 'smooth', block: 'start'})
 }
 
-document.querySelector('#aboutBtn').addEventListener('click', scrollToAboutSection)
-document.querySelector('#workBtn').addEventListener('click', scrollToWorkSection)
-document.querySelector('#contactBtn').addEventListener('click', scrollToContactSection)
+document.querySelector('#aboutBtn').addEventListener('click', () => {
+    scrollToAboutSection()
+    burger.classList.toggle('toggle')
+    slider.classList.toggle('nav-active')
+})
+document.querySelector('#workBtn').addEventListener('click', () => {
+    scrollToWorkSection()
+    burger.classList.toggle('toggle')
+    slider.classList.toggle('nav-active')
+})
+document.querySelector('#contactBtn').addEventListener('click', () => {
+    scrollToContactSection()
+    burger.classList.toggle('toggle')
+    slider.classList.toggle('nav-active')
+})
 
 
 const backToTopBtn = document.querySelector('#backToTopBtn')
@@ -180,4 +165,16 @@ const toTop = () => {
 }
 
 backToTopBtn.addEventListener('click', toTop)
+
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.querySelector(".hero_navigation").style.top = "0";
+  } else {
+    document.querySelector(".hero_navigation").style.top = "-8vh";
+  }
+  prevScrollpos = currentScrollPos;
+}
 

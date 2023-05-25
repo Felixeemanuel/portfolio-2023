@@ -5,7 +5,6 @@
 }
 
 html, body {
-  color-scheme: dark;
   overflow-x: hidden;
 }
 @media screen and (max-width: 600px) {
@@ -26,8 +25,8 @@ html, body {
 
 body {
   font-family: "Montserrat", sans-serif;
-  color: rgb(243, 243, 243);
-  background-color: #131212;
+  color: #f4fefd;
+  background-color: #1b2223;
 }
 
 .hero_navigation {
@@ -56,10 +55,12 @@ body {
 }
 .hero_navigation h4 {
   margin-left: 5rem;
+  color: #0bb092;
 }
 .hero_navigation h4 span {
   margin-left: 0.1rem;
   font-weight: 100;
+  color: #f4fefd;
 }
 @media screen and (max-width: 600px) {
   .hero_navigation h4 {
@@ -89,7 +90,7 @@ body {
     height: 92vh;
     align-items: center !important;
     z-index: 5;
-    background-color: #131212;
+    background-color: #1b2223;
     transform: translateX(100%);
     transition: 0.5s cubic-bezier(0.47, 0, 0.745, 0.715);
     opacity: 0.98;
@@ -111,7 +112,7 @@ body {
   }
 }
 .hero_navigation ul li a {
-  color: white;
+  color: #f4fefd;
 }
 .hero_navigation ul li a:nth-child(1) {
   -webkit-margin-end: 1rem;
@@ -163,7 +164,7 @@ body {
   transition: 0.2s ease;
 }
 .hero_navigation .line {
-  background-color: white;
+  background-color: #f4fefd;
   width: 25px;
   height: 3px;
   margin-right: 1.7rem;
@@ -259,16 +260,26 @@ body {
   transform: rotate(45deg);
   border: 1px solid rgb(32, 131, 32);
   margin-block: 0.7rem;
+  display: none;
 }
 .hero_section .progressbar .rectangle:first-of-type {
   background-color: rgb(32, 131, 32);
 }
+.hero_section .hero-img-blur {
+  border-radius: 50%;
+  background-color: #1b484a;
+  margin-left: 2rem;
+}
+@media screen and (max-width: 600px) {
+  .hero_section .hero-img-blur {
+    margin-left: 0rem;
+  }
+}
 .hero_section .hero_image {
-  background-image: url("./images/my-image.png");
+  background-image: url("./images/avatar.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border: 0.5px solid rgba(255, 255, 255, 0.246);
   height: 20rem;
   width: 20rem;
   border-radius: 50%;
@@ -318,6 +329,10 @@ body {
 .hero_section .hero_text h1 {
   font-size: 4rem;
   text-transform: uppercase;
+  background: linear-gradient(to right, #0ef6cc, rgba(3, 134, 110, 0.5803921569));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 @media screen and (max-width: 600px) {
   .hero_section .hero_text h1 {
@@ -341,10 +356,12 @@ body {
   font-weight: 300;
   text-align: center;
   opacity: 0.7;
+  color: #f4fefd;
 }
 .hero_section .hero_text p:first-of-type span {
   font-weight: bold;
   opacity: 1;
+  color: #0bb092;
 }
 @media screen and (max-width: 600px) {
   .hero_section .hero_text p:first-of-type {
@@ -363,6 +380,7 @@ body {
   font-weight: 200;
   text-align: center;
   opacity: 0.5;
+  color: #f4fefd;
 }
 @media screen and (max-width: 600px) {
   .hero_section .hero_text p:last-of-type {
@@ -376,7 +394,7 @@ body {
   align-items: center;
   justify-content: space-between;
   border-top: 0.1px solid rgba(255, 255, 255, 0.129);
-  background-color: #131212;
+  background-color: #1b2223;
 }
 .about_section img {
   height: 100vh;
@@ -516,7 +534,7 @@ body {
   align-items: center;
   border-top: 0.1px solid rgba(255, 255, 255, 0.129);
   position: relative;
-  background-color: #131212;
+  background-color: #1b2223;
   margin-bottom: 3rem;
 }
 .knowledge_section .progressbar {
@@ -630,7 +648,7 @@ body {
   }
 }
 .knowledge_section .knowledge_wrapper .rectangle p {
-  color: white;
+  color: #f4fefd;
   font-size: larger;
   font-weight: 600;
 }
@@ -716,7 +734,7 @@ body {
   align-items: center;
   justify-content: center;
   border-top: 0.1px solid rgba(255, 255, 255, 0.129);
-  background-color: #131212;
+  background-color: #1b2223;
   border-bottom: 0.1px solid rgba(255, 255, 255, 0.129);
 }
 .works_section h2 {
@@ -794,6 +812,7 @@ body {
   width: 100%;
 }
 .works_section .work-links a {
+  color: #0bb092;
   cursor: pointer;
 }
 .works_section .work-links a i {
@@ -893,6 +912,7 @@ body {
 }
 .form-section .form-intro p span {
   font-weight: 500;
+  color: #0bb092;
 }
 @media screen and (max-width: 600px) {
   .form-section .form-intro p {
@@ -940,6 +960,7 @@ body {
   font-size: 1.5rem;
   font-weight: 200;
   margin-bottom: 0.3rem;
+  color: #0bb092;
 }
 @media screen and (max-width: 600px) {
   .form-section .contact-form .input-group label {
@@ -958,6 +979,11 @@ body {
 }
 .form-section .contact-form .input-group input {
   font-size: 1.5rem;
+  background-color: #1b2223;
+  outline: 0;
+  border: 0;
+  border-bottom: 0.5px solid #f4fefd;
+  color: white;
 }
 @media screen and (max-width: 600px) {
   .form-section .contact-form .input-group input {
@@ -981,6 +1007,10 @@ body {
   resize: none;
   font-family: "Montserrat", sans-serif;
   padding: 0.5rem;
+  background-color: #1b2223;
+  color: white;
+  border: 0.5px solid #f4fefd;
+  outline: 0;
 }
 @media screen and (max-width: 600px) {
   .form-section .contact-form .input-group textarea {
@@ -1000,13 +1030,13 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background-color: rgb(32, 131, 32);
+  background-color: #0bb092;
   outline: none;
   border: 0;
   border-radius: 0.2rem;
   cursor: pointer;
   transition: 200ms ease;
-  color: white;
+  color: #f4fefd;
 }
 @media screen and (max-width: 600px) {
   .form-section .contact-form .send-btn {
@@ -1048,7 +1078,7 @@ footer {
   align-items: center;
   -webkit-margin-after: 1rem;
           margin-block-end: 1rem;
-  background-color: #131212;
+  background-color: #1b2223;
 }
 footer .logo {
   margin-block: 4rem;
@@ -1088,7 +1118,7 @@ footer .logo span {
 }
 
 .panel {
-  background-color: #131212;
+  background-color: #1b2223;
 }
 
 #backToTopBtn {
@@ -1106,5 +1136,5 @@ footer .logo span {
   border-radius: 50%;
   transition: 300ms ease;
   display: none;
-  color: white;
+  color: #f4fefd;
 }/*# sourceMappingURL=styles.css.map */
