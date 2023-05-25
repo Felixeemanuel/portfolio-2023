@@ -982,6 +982,7 @@ body {
   }
 }
 .form-section .contact-form .input-group input {
+  -webkit-appearance: none;
   font-size: 1.5rem;
   background-color: #1b2223;
   outline: 0;
@@ -1008,6 +1009,7 @@ body {
   }
 }
 .form-section .contact-form .input-group textarea {
+  -webkit-appearance: none;
   resize: none;
   font-family: "Montserrat", sans-serif;
   padding: 0.5rem;

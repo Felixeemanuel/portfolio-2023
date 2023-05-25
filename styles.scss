@@ -927,6 +927,7 @@ body {
                 }
             }
             input {
+                -webkit-appearance: none;
                 font-size: 1.5rem;
                 // border: .5px solid firebrick;
                 background-color: #1b2223;
@@ -950,6 +951,7 @@ body {
                 }
             }
             textarea {
+                -webkit-appearance: none;
                 resize: none;
                 font-family: 'Montserrat', sans-serif;
                 padding: .5rem;
